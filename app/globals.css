@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111827;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #dbeafe;
+  color: #111827;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.performance-marquee-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.performance-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.performance-marquee-group {
+  display: flex;
+  flex: none;
+  align-items: center;
+  padding-right: 0;
+}
+
+.performance-marquee-image {
+  display: block;
+  width: auto;
+  height: 230px;
+  max-width: none;
+  user-select: none;
+}
+
+.performance-marquee-right {
+  animation: performance-marquee-right 54s linear infinite;
+}
+
+.performance-marquee-left {
+  animation: performance-marquee-left 54s linear infinite;
+}
+
+.performance-marquee-viewport:hover .performance-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes performance-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes performance-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 640px) {
+  .performance-marquee-image {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .performance-marquee-image {
+    height: 400px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .performance-marquee-viewport {
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .performance-marquee-track {
+    display: block;
+    width: 100%;
+    animation: none !important;
+  }
+
+  .performance-marquee-group {
+    display: none;
+    padding: 0;
+  }
+
+  .performance-marquee-group:first-child {
+    display: block;
+  }
+
+  .performance-marquee-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.testimonial-rail {
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+}
+
+.testimonial-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-rail figure {
+  scroll-snap-align: center;
+}
