@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, ArrowRight, Play } from "lucide-react";
+import { ArrowDown, ArrowRight, Play, Sparkles } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 export default function HeroSection() {
@@ -25,12 +25,15 @@ export default function HeroSection() {
               Short-form content for apps, SaaS, AI tools, and digital brands.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <a
+              <motion.a
                 href="#work"
-                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-blue-700"
+                whileHover={reduceMotion ? undefined : { y: -2, scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-medium text-white transition-[background-color,box-shadow] duration-300 hover:bg-blue-700 hover:shadow-[0_0_24px_4px_rgba(37,99,235,0.42)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2"
               >
-                View my work <ArrowRight size={16} />
-              </a>
+                <span className="drop-shadow-[0_0_7px_rgba(255,255,255,0.65)]">View my work</span>
+                <ArrowRight size={16} />
+              </motion.a>
               <a
                 href="mailto:hello@axeldaniel.com"
                 className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3.5 text-sm font-medium text-ink transition hover:border-blue-200 hover:bg-blue-50"
@@ -49,7 +52,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="relative mx-auto w-full max-w-[560px] lg:ml-auto"
           >
-            <div className="relative aspect-[0.96] overflow-hidden rounded-[2rem] bg-[#eee9e4] shadow-card md:rounded-[2.5rem]">
+            <div aria-hidden="true" className="absolute inset-2 rotate-2 rounded-[2.2rem] border border-blue-100/80 bg-blue-50/50 md:rounded-[2.7rem]" />
+            <div className="relative aspect-[0.96] overflow-hidden rounded-[2rem] bg-[#eee9e4] shadow-card ring-1 ring-black/[0.03] md:rounded-[2.5rem]">
               <Image
                 src="/pict_axel/pict5.webp"
                 alt="Axel Daniel, creator and storyteller for tech brands"
@@ -59,6 +63,10 @@ export default function HeroSection() {
                 className="object-cover object-[center_38%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+              <div className="absolute right-5 top-5 flex items-center gap-2 rounded-full border border-white/30 bg-black/20 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-white shadow-soft backdrop-blur-md">
+                <Sparkles size={12} />
+                Creator-led stories
+              </div>
               <div className="absolute bottom-6 left-6 flex items-center gap-3 text-white">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/50 bg-white/20 backdrop-blur-md">
                   <Play size={15} fill="currentColor" />
@@ -68,8 +76,8 @@ export default function HeroSection() {
             </div>
 
             <motion.div
-              animate={reduceMotion ? undefined : { y: [0, -7, 0], rotate: [0, 0.4, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              animate={reduceMotion ? undefined : { x: [0, 4, 0], y: [0, -13, 0], rotate: [0, 0.8, 0] }}
+              transition={{ duration: 5.4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -left-5 top-[14%] rounded-2xl border border-white/80 bg-white/95 p-4 shadow-card backdrop-blur-md sm:-left-12 sm:p-5"
             >
               <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">Organic reach</p>
@@ -77,8 +85,8 @@ export default function HeroSection() {
               <p className="text-xs text-muted">views generated</p>
             </motion.div>
             <motion.div
-              animate={reduceMotion ? undefined : { y: [0, 6, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+              animate={reduceMotion ? undefined : { x: [0, -4, 0], y: [0, 11, 0], rotate: [0, -0.7, 0] }}
+              transition={{ duration: 6.1, repeat: Infinity, ease: "easeInOut", delay: 0.25 }}
               className="absolute -right-3 bottom-[19%] rounded-2xl border border-white/80 bg-white/95 p-4 shadow-card backdrop-blur-md sm:-right-8 sm:p-5"
             >
               <div className="flex items-center gap-3">
