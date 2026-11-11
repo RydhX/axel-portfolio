@@ -1,26 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowUpRight, Eye, Timer, Video } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
-
-const proofImages = [
-  {
-    src: "/peformance_data/01_campaign_leaderboard.png",
-    alt: "Airlearn creator leaderboard with campaign view results",
-    label: "Campaign leaderboard",
-  },
-  {
-    src: "/peformance_data/02_youtube_short_retention.png",
-    alt: "Airlearn YouTube Short audience retention results",
-    label: "Audience retention",
-  },
-  {
-    src: "/peformance_data/01_watch_time_25s.png",
-    alt: "Airlearn average view duration results",
-    label: "Average view duration",
-  },
-];
 
 const metrics = [
   {
@@ -152,30 +133,109 @@ export default function AirlearnCaseStudy() {
             <div className="mt-7 border-t border-gray-100 pt-5">
               <div className="mb-3 flex items-center justify-between">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-400">Campaign proof</p>
-                <p className="text-[11px] text-gray-400">From the original analytics</p>
+                <p className="text-[11px] text-gray-400">From performance row 1</p>
               </div>
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
-                {proofImages.map((image, index) => (
-                  <motion.figure
-                    key={image.src}
-                    initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.4, delay: index * 0.07 }}
-                    className="min-w-0"
-                  >
-                    <div className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-gray-100 bg-gray-50">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        sizes="(max-width: 640px) 30vw, 260px"
-                        className="object-contain p-1 transition duration-500 group-hover:scale-[1.03]"
-                      />
+              <div className="grid gap-3 lg:grid-cols-[1.35fr_0.9fr]">
+                <div className="rounded-xl border border-gray-100 bg-[#FCFCFD] p-4 sm:p-5">
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-semibold text-ink">Views by platform</p>
+                      <p className="mt-1 text-xs text-muted">Campaign views across social channels</p>
                     </div>
-                    <figcaption className="mt-2 text-[10px] font-medium leading-4 text-muted sm:text-xs">{image.label}</figcaption>
-                  </motion.figure>
-                ))}
+                    <Video size={16} className="shrink-0 text-blue-500" aria-hidden="true" />
+                  </div>
+                  <div
+                    className="mt-5"
+                    role="img"
+                    aria-label="Bar chart: YouTube 323.6 thousand views, Instagram 211.4 thousand views, TikTok 129.7 thousand views"
+                  >
+                    <div className="mb-2 grid grid-cols-3 gap-4 px-2 text-center sm:gap-8 sm:px-8" aria-hidden="true">
+                      {[
+                        { platform: "YouTube", views: "323.6K" },
+                        { platform: "Instagram", views: "211.4K" },
+                        { platform: "TikTok", views: "129.7K" },
+                      ].map((item) => (
+                        <span key={item.platform} className="text-xs font-semibold text-ink sm:text-sm">{item.views}</span>
+                      ))}
+                    </div>
+                    <div className="grid h-36 grid-cols-3 items-end gap-4 border-b border-gray-200 px-2 sm:h-44 sm:gap-8 sm:px-8">
+                      {[
+                        { platform: "YouTube", height: "100%" },
+                        { platform: "Instagram", height: "65.3%" },
+                        { platform: "TikTok", height: "40.1%" },
+                      ].map((item, index) => (
+                        <div key={item.platform} className="flex h-full min-w-0 items-end justify-center">
+                          <motion.div
+                            initial={reduceMotion ? { height: item.height } : { height: 0 }}
+                            whileInView={{ height: item.height }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.75, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                            className={`w-full max-w-24 rounded-t-lg ${index === 0 ? "bg-blue-600" : "bg-blue-400"}`}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-2 grid grid-cols-3 gap-4 px-2 text-center text-[11px] font-medium text-muted sm:gap-8 sm:text-xs">
+                      <span>YouTube</span>
+                      <span>Instagram</span>
+                      <span>TikTok</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex min-h-[18rem] flex-col overflow-hidden rounded-xl border border-blue-100 bg-gradient-to-br from-blue-50/80 via-white to-white p-4 sm:p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-semibold text-ink">Key metrics</p>
+                      <p className="mt-1 text-xs text-muted">Airlearn campaign highlights</p>
+                    </div>
+                    <span className="rounded-full border border-blue-100 bg-white/80 px-2.5 py-1 text-[10px] font-medium text-blue-700">Organic</span>
+                  </div>
+                  <div className="mt-5">
+                    <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-muted">Organic views</p>
+                    <p className="mt-1 font-serif text-3xl font-bold tracking-tight text-ink sm:text-4xl">1.1M<span className="text-blue-600">+</span></p>
+                  </div>
+                  <div className="mt-auto">
+                    <div
+                      className="mt-4"
+                      role="img"
+                      aria-label="Decorative mountain-shaped area visualization for the campaign metrics"
+                    >
+                      <svg viewBox="0 0 320 100" className="h-24 w-full overflow-visible" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="campaign-mountain-fill" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.32" />
+                            <stop offset="100%" stopColor="#3B82F6" stopOpacity="0.02" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M0 88 L0 74 L32 68 L61 73 L94 44 L121 54 L151 31 L177 42 L209 18 L236 34 L268 12 L294 27 L320 8 L320 88 Z" fill="url(#campaign-mountain-fill)" />
+                        <motion.path
+                          d="M0 74 L32 68 L61 73 L94 44 L121 54 L151 31 L177 42 L209 18 L236 34 L268 12 L294 27 L320 8"
+                          fill="none"
+                          stroke="#3B82F6"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          pathLength={1}
+                          initial={reduceMotion ? { pathLength: 1 } : { pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                        />
+                      </svg>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3 border-t border-blue-100/80 pt-3">
+                      <div>
+                        <p className="text-[10px] text-muted">Audience retention</p>
+                        <p className="mt-1 text-sm font-semibold text-ink">87.8%</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] text-muted">Avg. view duration</p>
+                        <p className="mt-1 text-sm font-semibold text-ink">25s</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
