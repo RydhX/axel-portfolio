@@ -142,3 +142,12 @@ a {
 .testimonial-rail figure {
   scroll-snap-align: center;
 }
+
+.portfolio-video-rail {
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.portfolio-video-rail::-webkit-scrollbar {
+  display: none;
+}

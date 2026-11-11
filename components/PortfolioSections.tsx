@@ -32,24 +32,195 @@ const categories = [
   "AI & SaaS",
   "Apps & digital products",
   "Paid ads & performance",
-  "Skits / POVs",
-  "Tutorials",
+  "Skits / POV storytelling",
+  "Tutorials & walkthroughs",
+  "Airlearn case study",
 ];
 
 const projects = [
   {
-    title: "A new language, one scroll at a time",
-    brand: "Airlearn",
+    title: "AI product storytelling",
+    brand: "AI & SaaS",
     category: "AI & SaaS",
-    src: "/portfolio_videos/airlearned.mp4",
-    note: "Creator-led product storytelling",
+    folder: "ai_and_saas",
+    file: "achome(revisi) (1) (1).mp4",
+    note: "Creator-led concept",
+  },
+  {
+    title: "Language learning, made social",
+    brand: "Learnd.AI",
+    category: "AI & SaaS",
+    folder: "ai_and_saas",
+    file: "Copy of learnd 3.mp4",
+    note: "App storytelling",
+  },
+  {
+    title: "A creator-led AI product story",
+    brand: "Learnd.AI",
+    category: "AI & SaaS",
+    folder: "ai_and_saas",
+    file: "Copy of learnd ai 2.mp4",
+    note: "AI product storytelling",
+  },
+  {
+    title: "Study smarter with Thesisroom",
+    brand: "Thesisroom",
+    category: "Tutorials & walkthroughs",
+    folder: "ai_and_saas",
+    file: "Copy of THESISROOM 2.mp4",
+    note: "Product walkthrough",
+  },
+  {
+    title: "What your hobby says about you",
+    brand: "Creator concept",
+    category: "AI & SaaS",
+    folder: "ai_and_saas",
+    file: "Copy of what your hobby says about you (Musician Edition) (1).mp4",
+    note: "Musician edition",
+  },
+  {
+    title: "A clip that gets the conversation started",
+    brand: "Creator concept",
+    category: "Apps & digital products",
+    folder: "apps_and_digital",
+    file: "Comment “clip” and ill send you a link to this banger website 🤯reels editor editing aivideo.mp4",
+    note: "App discovery",
+  },
+  {
+    title: "App feature showcase",
+    brand: "Creator portfolio",
+    category: "Tutorials & walkthroughs",
+    folder: "apps_and_digital",
+    file: "Copy of IMG_1069.mp4",
+    note: "Feature walkthrough",
+  },
+  {
+    title: "Digital product in action",
+    brand: "Creator portfolio",
+    category: "Tutorials & walkthroughs",
+    folder: "apps_and_digital",
+    file: "Copy of IMG_9824.mp4",
+    note: "Creator-led walkthrough",
   },
   {
     title: "A better way to make lists",
-    brand: "Listimize",
+    brand: "Treoq",
     category: "Apps & digital products",
-    src: "/portfolio_videos/listimize.mp4",
-    note: "Product demo · social-first",
+    folder: "apps_and_digital",
+    file: "Copy of treoq 1.mp4",
+    note: "Product storytelling",
+  },
+  {
+    title: "Good, better, best",
+    brand: "Creator concept",
+    category: "Apps & digital products",
+    folder: "apps_and_digital",
+    file: "Copy of Video 9 - Good_ Better_ Best.mp4",
+    note: "Social-first format",
+  },
+  {
+    title: "Got roasted for being broke in Spanish",
+    brand: "Airlearn",
+    category: "Airlearn case study",
+    folder: "case_study_airlearn",
+    file: "got roasted for being broke in spanish 😭🥀 #airlearnpartner #airlearn #funny #spanish #air76640.mp4",
+    note: "Comedy-led language learning",
+  },
+  {
+    title: "Learning how to say “eggs” in Spanish",
+    brand: "Airlearn",
+    category: "Airlearn case study",
+    folder: "case_study_airlearn",
+    file: "learning how to say “eggs” in Spanish #airlearnpartner #learnspanish #air45127.mp4",
+    note: "Language-learning skit",
+  },
+  {
+    title: "My AI tutor caught my mistake",
+    brand: "Airlearn",
+    category: "Airlearn case study",
+    folder: "case_study_airlearn",
+    file: "My AI tutor caught me gluing a Thai politeness particle onto an English word and treating it as.mp4",
+    note: "AI tutor product story",
+  },
+  {
+    title: "A performance-led product ad",
+    brand: "Creator campaign",
+    category: "Paid ads & performance",
+    folder: "paid_and_ads",
+    file: "Copy of 1005 (3)-compressed.mp4",
+    note: "Paid social creative",
+  },
+  {
+    title: "Exam prep, made approachable",
+    brand: "Exam Prepare",
+    category: "Paid ads & performance",
+    folder: "paid_and_ads",
+    file: "Copy of examprepare 1 (1)-compressed.mp4",
+    note: "Performance creative",
+  },
+  {
+    title: "A Heftas product story",
+    brand: "Heftas",
+    category: "Paid ads & performance",
+    folder: "paid_and_ads",
+    file: "Copy of heftas (1) (1)-compressed.mp4",
+    note: "Paid social creative",
+  },
+  {
+    title: "Listimize, in a few seconds",
+    brand: "Listimize",
+    category: "Paid ads & performance",
+    folder: "paid_and_ads",
+    file: "Copy of listimize 1 (2)-compressed.mp4",
+    note: "App performance ad",
+  },
+  {
+    title: "Disgustingly easy",
+    brand: "Creator concept",
+    category: "Paid ads & performance",
+    folder: "paid_and_ads",
+    file: "Copy of Video 11 - Disgustingly Easy_ Part 3-compressed.mp4",
+    note: "Hook-driven ad",
+  },
+  {
+    title: "A day at the office",
+    brand: "Creator concept",
+    category: "Skits / POV storytelling",
+    folder: "skits_pov_storytelling",
+    file: "Copy of DA625D99-09B2-462D-A4C9-E868ED2E1411 (1)-compressed.mp4",
+    note: "POV skit",
+  },
+  {
+    title: "A relatable learning moment",
+    brand: "Learnd.AI",
+    category: "Skits / POV storytelling",
+    folder: "skits_pov_storytelling",
+    file: "Copy of learnd 2-compressed.mp4",
+    note: "Education skit",
+  },
+  {
+    title: "AI learning, with a twist",
+    brand: "Learnd.AI",
+    category: "Skits / POV storytelling",
+    folder: "skits_pov_storytelling",
+    file: "Copy of learnd ai 1-compressed.mp4",
+    note: "AI-themed POV",
+  },
+  {
+    title: "A quick creator-led story",
+    brand: "Creator portfolio",
+    category: "Skits / POV storytelling",
+    folder: "skits_pov_storytelling",
+    file: "Copy of video1 (1)-compressed.mp4",
+    note: "Short-form storytelling",
+  },
+  {
+    title: "Rules for thee, but not for me",
+    brand: "Jarvey",
+    category: "Skits / POV storytelling",
+    folder: "skits_pov_storytelling",
+    file: "rules for thee but not for me ahh boss 💀 #intern #office #reels #jarvey-compressed.mp4",
+    note: "Workplace comedy",
   },
 ];
 
@@ -79,13 +250,26 @@ const fadeIn: Variants = {
 };
 
 export default function PortfolioSections() {
-  const [activeCategory, setActiveCategory] = useState("All work");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [visibleProjectCount, setVisibleProjectCount] = useState(4);
   const testimonialRailRef = useRef<HTMLDivElement>(null);
+  const projectRailsRef = useRef(new Map<string, HTMLDivElement>());
   const reduceMotion = useReducedMotion();
-  const filteredProjects = projects.filter((project) => activeCategory === "All work" || project.category === activeCategory);
+  const activeProjects = activeCategory ? projects.filter((project) => project.category === activeCategory) : [];
+  const visibleProjects = activeProjects.slice(0, visibleProjectCount);
 
   const scrollTestimonials = (direction: -1 | 1) => {
     const rail = testimonialRailRef.current;
+    if (!rail) return;
+
+    rail.scrollBy({
+      left: direction * rail.clientWidth * 0.8,
+      behavior: reduceMotion ? "instant" : "smooth",
+    });
+  };
+
+  const scrollProjectRail = (category: string, direction: -1 | 1) => {
+    const rail = projectRailsRef.current.get(category);
     if (!rail) return;
 
     rail.scrollBy({
@@ -137,74 +321,143 @@ export default function PortfolioSections() {
               <h2 className="mt-3 max-w-2xl font-serif text-4xl tracking-[-0.04em] text-ink md:text-6xl">Stories built to stop the scroll.</h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-muted">Clear ideas, creator-led storytelling, and a reason to keep watching.</p>
             </div>
-            <span className="text-sm text-muted">{filteredProjects.length} {filteredProjects.length === 1 ? "project" : "projects"}</span>
+            <span className="text-sm text-muted">{projects.length} videos across {categories.length - 1} formats</span>
           </motion.div>
 
-          <div className="mt-10 flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Filter portfolio by category">
-            {categories.map((category) => {
-              const isActive = activeCategory === category;
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.slice(1).map((category) => {
+              const preview = projects.find((project) => project.category === category);
+              const categoryCount = projects.filter((project) => project.category === category).length;
+              if (!preview) return null;
+
               return (
                 <button
                   key={category}
                   type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => setActiveCategory(category)}
-                  className={`shrink-0 rounded-full border px-4 py-2.5 text-sm transition ${isActive ? "border-ink bg-ink text-white" : "border-gray-200 bg-white text-muted hover:border-gray-300 hover:text-ink"}`}
+                  aria-pressed={activeCategory === category}
+                  onClick={() => {
+                    setActiveCategory(category);
+                    setVisibleProjectCount(4);
+                  }}
+                  className={`group relative isolate aspect-[16/10] overflow-hidden rounded-3xl bg-gray-950 text-left shadow-soft ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                    activeCategory === category ? "ring-2 ring-blue-500" : ""
+                  }`}
                 >
-                  {category}
+                  <video
+                    src={`/portfolio_videos/${preview.folder}/${encodeURIComponent(preview.file)}`}
+                    className="absolute inset-0 -z-10 h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="none"
+                    aria-hidden="true"
+                  />
+                  <span className="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-black/20 to-black/10 transition-colors group-hover:from-black/80" />
+                  <span className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center text-white">
+                    <span className="font-serif text-2xl tracking-tight sm:text-3xl">{category}</span>
+                    <span className="mt-2 text-xs font-medium text-white/75">
+                      {categoryCount} {categoryCount === 1 ? "video" : "videos"} · Preview
+                    </span>
+                  </span>
                 </button>
               );
             })}
           </div>
 
-          <motion.div layout className="mt-7 grid gap-5 md:grid-cols-2">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project) => (
-                <motion.article
-                  key={project.title}
-                  layout
-                  initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.28 }}
-                  className="group overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-soft"
+          <AnimatePresence mode="wait">
+            {activeCategory && (
+              <motion.section
+                key={activeCategory}
+                initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                transition={{ duration: 0.25 }}
+                className="mt-12"
+                aria-label={`${activeCategory} videos`}
+              >
+                <div className="mb-4 flex items-center gap-3 border-t border-gray-200 pt-5">
+                  <h3 className="shrink-0 font-serif text-xl tracking-tight text-ink sm:text-2xl">{activeCategory}</h3>
+                  <span className="h-px flex-1 bg-gray-100" aria-hidden="true" />
+                  <span className="shrink-0 text-xs text-muted">
+                    {activeProjects.length} {activeProjects.length === 1 ? "video" : "videos"}
+                  </span>
+                  <div className="flex shrink-0 gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => scrollProjectRail(activeCategory, -1)}
+                      aria-label={`Scroll ${activeCategory} videos left`}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-ink transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    >
+                      <ArrowLeft size={16} />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => scrollProjectRail(activeCategory, 1)}
+                      aria-label={`Scroll ${activeCategory} videos right`}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 bg-white text-ink transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    >
+                      <ArrowRight size={16} />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  ref={(element) => {
+                    if (element) projectRailsRef.current.set(activeCategory, element);
+                    else projectRailsRef.current.delete(activeCategory);
+                  }}
+                  className="portfolio-video-rail flex snap-x snap-mandatory gap-3 overflow-x-auto overflow-y-hidden pb-5 sm:gap-4"
+                  aria-label={`${activeCategory} portfolio videos`}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                    <video
-                      src={project.src}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.025]"
-                      controls
-                      playsInline
-                      preload="metadata"
-                      aria-label={`${project.brand}: ${project.title}`}
-                    />
-                    <span className="absolute left-4 top-4 rounded-full border border-white/70 bg-white/85 px-3 py-1.5 text-xs font-medium text-ink backdrop-blur">
-                      {project.category}
-                    </span>
+                  {visibleProjects.map((project) => (
+                    <motion.article
+                      key={project.title}
+                      initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.28 }}
+                      className="group w-[min(78vw,280px)] shrink-0 snap-start overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-soft sm:w-[300px] lg:w-[320px]"
+                    >
+                      <div className="relative aspect-[9/16] overflow-hidden bg-gray-950">
+                        <video
+                          src={`/portfolio_videos/${project.folder}/${encodeURIComponent(project.file)}`}
+                          className="h-full w-full object-contain"
+                          controls
+                          playsInline
+                          preload="metadata"
+                          aria-label={`${project.brand}: ${project.title}`}
+                        />
+                        <span className="pointer-events-none absolute left-3 top-3 rounded-full border border-white/70 bg-white/90 px-2.5 py-1 text-[10px] font-medium text-ink backdrop-blur sm:left-4 sm:top-4 sm:px-3 sm:py-1.5 sm:text-xs">
+                          {project.category}
+                        </span>
+                      </div>
+                      <div className="flex min-h-32 items-start justify-between gap-4 p-4 sm:p-5">
+                        <div>
+                          <p className="text-[10px] font-medium uppercase tracking-[0.12em] text-blue-600 sm:text-xs">{project.brand} <span className="px-1 text-gray-300">/</span> {project.note}</p>
+                          <h4 className="mt-2 font-serif text-xl tracking-tight text-ink sm:text-2xl">{project.title}</h4>
+                        </div>
+                        <span className="mt-1 rounded-full border border-gray-200 p-2 text-muted transition group-hover:border-blue-100 group-hover:bg-blue-50 group-hover:text-blue-600">
+                          <Play size={15} />
+                        </span>
+                      </div>
+                    </motion.article>
+                  ))}
+                </div>
+                {visibleProjectCount < activeProjects.length && (
+                  <div className="mt-5 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() => setVisibleProjectCount((count) => count + 4)}
+                      className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-medium text-ink shadow-soft transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    >
+                      Show more videos
+                      <ArrowRight size={16} />
+                    </button>
                   </div>
-                  <div className="flex items-start justify-between gap-4 p-5 md:p-6">
-                    <div>
-                      <p className="text-xs font-medium uppercase tracking-[0.12em] text-blue-600">{project.brand} <span className="px-1 text-gray-300">/</span> {project.note}</p>
-                      <h3 className="mt-2 font-serif text-2xl tracking-tight text-ink">{project.title}</h3>
-                    </div>
-                    <span className="mt-1 rounded-full border border-gray-200 p-2 text-muted transition group-hover:border-blue-100 group-hover:bg-blue-50 group-hover:text-blue-600">
-                      <Play size={15} />
-                    </span>
-                  </div>
-                </motion.article>
-              ))}
-            </AnimatePresence>
-            {filteredProjects.length === 0 && (
-              <div className="rounded-3xl border border-dashed border-gray-200 bg-white px-6 py-12 text-center md:col-span-2">
-                <p className="font-serif text-2xl text-ink">More stories are in the edit.</p>
-                <p className="mt-2 text-sm text-muted">Ask about this format and I&apos;ll share relevant work.</p>
-                <a href="mailto:hello@axeldaniel.com" className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-blue-600">
-                  Request examples <ArrowRight size={15} />
-                </a>
-              </div>
+                )}
+              </motion.section>
             )}
-          </motion.div>
+          </AnimatePresence>
         </div>
       </section>
 
